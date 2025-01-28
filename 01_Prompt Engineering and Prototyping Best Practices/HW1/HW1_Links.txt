@@ -1,0 +1,20 @@
+
+https://chatgpt.com/g/g-0oc8WCGDe-em-chat-1
+and
+ https://chatgpt.com/g/g-Q8bD7pRPq-aimakerspace-day1-gpt-2-parsingcsv
+
+Loom VIdeo
+https://www.loom.com/share/425cc799e82f49e78a1a886a8b513019
+
+
+ Share 3 lessons learned
+
+1) Setting up Github properly is critically important :-)
+2) GPT is much more capable of interpreting the  user's intent than originally suspected
+3) GPT is able to parse somewhat reliably through a CSV file and pull content out however it also did so with varying success.
+
+
+ Share 3 lessons not yet learned
+1) How to best structure the input so as to be able to parse files consistently and reliably
+2) How to master Git and the different ways to process and arrange repositories
+3) How to best interact with GPT to properly prompt to get expectations met

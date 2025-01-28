@@ -1,0 +1,9 @@
+Serial Number, Subsystem, Description of rework
+1, , removal and replacement of YAG rod
+2, ,YAG rod burn spots
+3, ,removal and replacement of output coupler
+4, ,removal and realignment of OC
+5, ,replacement of control board
+6, ,removal of control pcb
+7, ,realignment of optics
+8, ,alignment of lens stack

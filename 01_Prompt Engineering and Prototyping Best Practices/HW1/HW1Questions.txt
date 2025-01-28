@@ -1,0 +1,56 @@
+Q1: Explain the concept of object-oriented programming in simple terms to a complete beginner.
+
+Chatbot
+
+Of course! Object-oriented programming is a way of writing computer programs that focuses on organizing code into "objects" that represent real-world things or concepts.
+
+Imagine you have a car. In object-oriented programming, you would create an "object" called Car that has properties like color, model, and speed, and behaviors like starting the engine or changing gears.
+
+These objects can interact with each other by sending messages and sharing information. For example, you could have a Driver object that interacts with the Car object to drive it.
+
+By using object-oriented programming, you can break down complex problems into smaller, more manageable parts, making your code easier to understand and maintain. It's like organizing a messy room into different boxes for clothes, books, and toys - everything has its place and purpose!
+
+I hope that helps you understand the basics of object-oriented programming! Let me know if you have any more questions.
+
+Aspect Tested: text generation,  Few-shot prompting ("in simple terms to a complete beginner) and audience-specific summary
+
+Q2) Read the following paragraph and provide a concise summary of the key points…
+
+Of course! Let's break it down together. First, we need to carefully read the paragraph to understand its main points. Then, we can identify the key ideas and concepts mentioned. After that, we can organize these key points into a concise summary that captures the essence of the paragraph. Finally, we can review and refine the summary to ensure it effectively conveys the main message of the paragraph. Let's start by reading the paragraph together.
+
+Aspect Tested: Summarization
+
+Q3) Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
+
+Once upon a time, in a bustling city filled with towering skyscrapers and bustling streets, there was a small robot named Spark. Spark was designed to help with household chores, but deep down, he longed for something more - friendship.
+
+One day, while wandering through the city's outskirts, Spark stumbled upon an abandoned park. Among the overgrown bushes and forgotten swings, he spotted a lonely stray cat. At first, the cat hissed and arched its back, but Spark approached with gentle beeps and whirs, offering a shiny bolt as a peace offering.
+
+To Spark's surprise, the cat cautiously accepted the gift and soon, a heartwarming friendship blossomed between the unlikely pair. They spent their days exploring the park together, chasing butterflies and basking in the warm sunlight.
+
+Through this unexpected friendship, Spark learned that companionship could be found in the most unlikely of places, bringing joy and warmth to his mechanical heart.
+
+Aspect Tested: Text generation,  writing style. quality of story generator
+
+Q4) If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
+
+
+Hello! That's a great question. Let's break it down step by step.
+
+To get exactly 12 apples, you would need to buy 3 packs of apples (3 packs x 4 apples per pack = 12 apples).
+
+To get exactly 9 oranges, you would need to buy 3 packs of oranges (3 packs x 3 oranges per pack = 9 oranges).
+
+So, to get exactly 12 apples and 9 oranges, you would need to buy 3 packs of apples and 3 packs of oranges.
+
+I hope that helps! Let me know if you have any other questions.
+
+Aspect Tested: Question Answering & Logical reasoning - AIs ability to critically think and parse the input and extend to aspects of arithmetic. 
+
+Q5) Rewrite the following paragraph in a professional, formal tone…
+
+Certainly! Here is the revised paragraph:
+
+Please carefully consider your response step by step.
+
+Aspect Tested: Document understanding & Role playing
