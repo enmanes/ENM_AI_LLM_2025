@@ -3,7 +3,6 @@ from collections import defaultdict
 from typing import List, Tuple, Callable
 from aimakerspace.openai_utils.embedding import EmbeddingModel
 import asyncio
-import time
 
 
 def cosine_similarity(vector_a: np.array, vector_b: np.array) -> float:
@@ -18,8 +17,6 @@ class VectorDatabase:
     def __init__(self, embedding_model: EmbeddingModel = None):
         self.vectors = defaultdict(np.array)
         self.embedding_model = embedding_model or EmbeddingModel()
-        #ENM added following line
-        #self.batch_size = batch_size
 
     def insert(self, key: str, vector: np.array) -> None:
         self.vectors[key] = vector
@@ -55,26 +52,6 @@ class VectorDatabase:
         for text, embedding in zip(list_of_text, embeddings):
             self.insert(text, np.array(embedding))
         return self
-    # SYNC VERSION ADDED BY ENM - ADDED THE FOLLOWING BLOCK OF CODE TO MAKE THE CODE WORK WITH THE ASSIGNMENT
-    def build_from_list(self, list_of_text: List[str]) -> "VectorDatabase":
-        embeddings = self.embedding_model.get_embeddings(list_of_text)
-        for text, embedding in zip(list_of_text, embeddings):
-            self.insert(text, np.array(embedding))
-        return self
-    
-    #def build_from_list(self, list_of_text: List[str]) -> "VectorDatabase":
-        # Process documents in batches
-     #   for i in range(0, len(list_of_text), self.batch_size):
-      ##      batch = list_of_text[i:i + self.batch_size]
-       #     embeddings = self.embedding_model.get_embeddings(batch)
-            
-       #     for text, embedding in zip(batch, embeddings):
-       #         self.insert(text, np.array(embedding))
-            
-            # Add a small delay between batches to respect rate limits
-       #     time.sleep(1)
-
-        #return self
 
 
 if __name__ == "__main__":
@@ -85,20 +62,10 @@ if __name__ == "__main__":
         "My sister adopted a kitten yesterday.",
         "Look at this cute hamster munching on a piece of broccoli.",
     ]
-# ENM COMMENTED THE ASYNC METHOD BELOW AND ADDED THE SYNC METHOD
-    #vector_db = VectorDatabase()
-    #vector_db = asyncio.run(vector_db.abuild_from_list(list_of_text))
-    #k = 2
 
-# ENM ADDED THE FOLLOWING BLOCK OF CODE TO MAKE THE CODE WORK WITH THE ASSIGNMENT- SYNC VERSION
-    vector_db = VectorDatabase() 
-    BATCH_SIZE = 20  # Adjust this based on your rate limits
-    for i in range(0, len(list_of_text), BATCH_SIZE):
-        batch = list_of_text[i:i + BATCH_SIZE]
-        vector_db = vector_db.build_from_list(batch)
-        # Add a small delay between batches to respect rate limits
-        time.sleep(1) 
-    k=2
+    vector_db = VectorDatabase()
+    vector_db = asyncio.run(vector_db.abuild_from_list(list_of_text))
+    k = 2
 
     searched_vector = vector_db.search_by_text("I think fruit is awesome!", k=k)
     print(f"Closest {k} vector(s):", searched_vector)

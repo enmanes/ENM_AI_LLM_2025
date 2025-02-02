@@ -1,0 +1,36 @@
+Questions from Course Work
+
+Question 1:
+The default embedding dimension of `text-embedding-3-small` is 1536, as noted above. 
+A. Is there any way to modify this dimension?  
+Yes - see next answer.
+B. What technique does OpenAI use to achieve this?
+ Yes, pass it a parameter to limit the dimension. 
+  dimensions integer Optional
+  example "dimensions": "1536"
+  
+** HOWEVER - NOT QUITE SURE WHERE TO PUT IT IN OUR CODE STYLE AS FORMATTING
+** LOOKS DIFFERENT THAN THE EXAMPLES CODE FROM THE PROVIDED LINK TO OPENAI
+
+I "think" it would be something like modifying the original code to add dimensions:
+        async def process_batch(batch):
+            embedding_response = await self.async_client.embeddings.create(
+                input=batch, model=self.embeddings_model_name, dimensions=1536
+            )
+
+There are several instances in embedding.py where this is done. Would I have to do it for every function call?  If so, it would have been good to create some variables up front so that they are set up front and used for all functions.
+
+The number of dimensions the resulting output embeddings should have. Only supported in text-embedding-3 and later models.
+As mentioned in class - the default for text-embedding-3-small is 1536 but can't be any greater than 2048.
+
+Question 2: What are the benefits of using an `async` approach to collecting our embeddings?
+
+Async can process embeddings concurrently when compared to async which might wait for each batch to complete before starting the next one slowing things down.
+Also it would appear that async frees up I/O so that we aren't tying up resources waiting for a response.
+Both of these significantly speed up the process.
+The CPU can also be freed up to work on other tasks as opposed to waiting for a response.
+The combination of batching and async processing maintains good throughput without overwhelming the API.
+This significantly speeds up RAG applications as well.
+The downside is that you could overwhelm the API if you don't manage the batch size and number of concurrent requests properly. 
+
+
