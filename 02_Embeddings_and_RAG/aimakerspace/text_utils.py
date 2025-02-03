@@ -13,9 +13,11 @@ class TextFileLoader:
             self.load_directory()
         elif os.path.isfile(self.path) and self.path.endswith(".txt"):
             self.load_file()
+        elif os.path.isfile(self.path) and self.path.endswith(".pdf"):
+            self.load_file()  # ENM ADDED THIS-TRYING TO SEE IF I CAN USE THE .LOAD_FILE OF TXT OTHERWISE WILL NEED TO CREAET .load_pdf class and edit below
         else:
             raise ValueError(
-                "Provided path is neither a valid directory nor a .txt file."
+                "Provided path is neither a valid directory nor a .txt nor a .pdf file."
             )
 
     def load_file(self):
