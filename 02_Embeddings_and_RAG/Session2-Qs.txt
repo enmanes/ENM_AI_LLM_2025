@@ -33,4 +33,14 @@ The combination of batching and async processing maintains good throughput witho
 This significantly speeds up RAG applications as well.
 The downside is that you could overwhelm the API if you don't manage the batch size and number of concurrent requests properly. 
 
+Question 3: When calling the OpenAI API - are there any ways we can achieve more reproducible outputs?
+
+> NOTE: Check out [this section](https://platform.openai.com/docs/guides/text-generation/) of the OpenAI documentation for the answer!
+
+Answer 3: One can use higher performance models. Also, from the link above, "You can improve output by giving the model precise instructions, examples, and necessary context information—like private or specialized information not included in the model's training data
+In short, providing more guidance to the prompt, some assistance examples, and a more precise question.  One can also provide documents to the model to better guide the response.  In short, utilize RAG.
+To improve accuracy - from the lin above - " Accurate responses require that the model has all the information it needs to generate a response, and knows how to go about creating a response (from interpreting input to formatting and styling). Often, this will require a mix of prompt engineering, RAG, and model fine-tuning."
+
+Question #4: What prompting strategies could you use to make the LLM have a more thoughtful, detailed response?
+Answer 4: RAG, Prompt Engineering, and Model Fine Tuning.
 

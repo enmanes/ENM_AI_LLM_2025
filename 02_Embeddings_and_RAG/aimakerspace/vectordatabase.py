@@ -91,6 +91,7 @@ if __name__ == "__main__":
     #k = 2
 
 # ENM ADDED THE FOLLOWING BLOCK OF CODE TO MAKE THE CODE WORK WITH THE ASSIGNMENT- SYNC VERSION
+# LIKELY WANT TO USE THE ASYNC VERSION TO PROCESS FASTER
     vector_db = VectorDatabase() 
     BATCH_SIZE = 20  # Adjust this based on your rate limits
     for i in range(0, len(list_of_text), BATCH_SIZE):
@@ -98,7 +99,7 @@ if __name__ == "__main__":
         vector_db = vector_db.build_from_list(batch)
         # Add a small delay between batches to respect rate limits
         time.sleep(1) 
-    k=2
+    k=2 # ENM ADDED NOT SURE IF THIS IS NEEDED
 
     searched_vector = vector_db.search_by_text("I think fruit is awesome!", k=k)
     print(f"Closest {k} vector(s):", searched_vector)

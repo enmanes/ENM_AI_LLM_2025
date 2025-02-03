@@ -32,6 +32,8 @@ class TextFileLoader:
                         os.path.join(root, file), "r", encoding=self.encoding
                     ) as f:
                         self.documents.append(f.read())
+               # elif file.endswith(".pdf"):
+               #     self.load_pdf()  # ENM ADDED THIS-TRYING TO SEE IF I CAN USE THE .LOAD_FILE OF TXT OTHERWISE WILL NEED TO CREAET .load_pdf class and edit below
 
     def load_documents(self):
         self.load()
