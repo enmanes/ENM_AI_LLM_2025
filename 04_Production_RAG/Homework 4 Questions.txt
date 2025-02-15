@@ -1,0 +1,52 @@
+Homework 4 Questions
+
+Questions 1:  What other models could we have used?
+Answer 1: THe following models and aliases are available, for gpt-4
+gpt-4o points to  gpt-4o-2024-08-06
+chatgpt-4o-latest points toLatest used in ChatGPT
+gpt-4o-mini points to gpt-4o-mini-2024-07-18
+o1 points to o1-2024-12-17
+o1-mini points to o1-mini-2024-09-12
+o3-mini points to o3-mini-2025-01-31
+o1-preview points to o1-preview-2024-09-12
+gpt-4o-realtime-preview points to gpt-4o-realtime-preview-2024-12-17
+gpt-4o-mini-realtime-preview points to gpt-4o-mini-realtime-preview-2024-12-17
+gpt-4o-audio-preview gpt-4o-audio-preview-2024-12-17
+
+but many other types of models are available as well and they have many aliases as well
+
+GPT models - Our fast, versatile, high-intelligence flagship models
+Reasoning models - Our o-series reasoning models excel at complex, multi-step tasks
+GPT-4o Realtime - GPT-4o models capable of realtime text and audio inputs and outputs
+GPT-4o Audio - GPT-4o models capable of audio inputs and outputs via REST API
+DALL·E - A model that can generate and edit images given a natural language prompt
+TTS - A set of models that can convert text into natural sounding spoken audio
+Whisper - A model that can convert audio into text
+Embeddings - A set of models that can convert text into a numerical form
+Moderation - A fine-tuned model that can detect whether text may be sensitive or unsafe
+Deprecated - A full list of models that have been deprecated along with the suggested replacement
+
+
+Activity 1:  Brainstorm some ideas on different ways to chunk.
+1)  If HTML code looking at headers to chunk document into important sections
+2)  Looking for repetition of words and separating different sentences so that keywords aren't in the same sentence as the rest of the sentence would provide more context
+3)  all the other delimiters CSV, Tab, etc.  as we've already covered newlines, double newlines, etc
+4) Looking for keywords like Summary, abstract, bibliography, appendix, etc
+
+Question 2: What is the embedding dimension, given that we're using `text-embedding-3-small`?
+Answer 2: 1536 for small and 3072 for large are the defaults
+
+Question #3:
+
+What does LCEL do that makes it more reliable at scale?
+Answer: 'LCEL enhances reliability at scale by allowing for graceful error handling through fallbacks, which is crucial due to the non-determinism of LLMs. Additionally, it supports parallelism, enabling efficient execution of components that can operate concurrently, which is beneficial given that LLM applications often involve lengthy API calls.'
+
+#### ❓ Question #4:
+LangGraph's graph-based approach lets us visualize and manage complex flows naturally. How could we extend our current implementation to handle edge cases? For example:
+- What if the retriever finds no relevant context?  
+- What if the response needs fact-checking?
+Consider how you would modify the graph to handle these scenarios.
+Answer 4: I'd put some sort of error checking or some threshold of cosine matching that it would need to meet otherwise report that "insufficient quality of response possible"
+- What if the retriever finds no relevant context?  Add a context validation node that checks if the list is empty or the similarity score is below a threshold and return an appropriate response.
+- What if the response needs fact-checking? Compare the generated response against the provided context and see if there is a match or logical consistency and report accordingly.
+Consider how you would modify the graph to handle these scenarios.
