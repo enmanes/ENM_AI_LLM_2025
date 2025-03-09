@@ -15,5 +15,8 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "scikit-learn>=1.6.1",
     "scipy>=1.15.1",
+<<<<<<< HEAD
     "PyPDF2>=3.0",
+=======
+>>>>>>> 1b963e52d261b1851b7c8927b6607b7fc9ab2f54
 ]

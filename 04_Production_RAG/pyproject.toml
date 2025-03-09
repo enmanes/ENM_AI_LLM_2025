@@ -18,6 +18,9 @@ dependencies = [
     "openai>=1.60.0",
     "cohere>=5.13.11",
     "lxml>=5.3.0",
+<<<<<<< HEAD
     "ipykernel>=6.29.5",
     "beautifulsoup4>=4.12.3"
+=======
+>>>>>>> 1b963e52d261b1851b7c8927b6607b7fc9ab2f54
 ]
