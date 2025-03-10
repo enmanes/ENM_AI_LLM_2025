@@ -6,11 +6,7 @@ resolution-markers = [
 ]
 
 [[package]]
-<<<<<<< HEAD
 name = "02-embeddings-and-rag"
-=======
-name = "02-pythonic-rag"
->>>>>>> 1b963e52d261b1851b7c8927b6607b7fc9ab2f54
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
@@ -21,10 +17,7 @@ dependencies = [
     { name = "openai" },
     { name = "pandas" },
     { name = "plotly" },
-<<<<<<< HEAD
     { name = "pypdf2" },
-=======
->>>>>>> 1b963e52d261b1851b7c8927b6607b7fc9ab2f54
     { name = "python-dotenv" },
     { name = "scikit-learn" },
     { name = "scipy" },
@@ -39,10 +32,7 @@ requires-dist = [
     { name = "openai", specifier = ">=1.59.7" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "plotly", specifier = ">=5.24.1" },
-<<<<<<< HEAD
     { name = "pypdf2", specifier = ">=3.0" },
-=======
->>>>>>> 1b963e52d261b1851b7c8927b6607b7fc9ab2f54
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "scikit-learn", specifier = ">=1.6.1" },
     { name = "scipy", specifier = ">=1.15.1" },
@@ -533,11 +523,7 @@ name = "ipykernel"
 version = "6.29.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-<<<<<<< HEAD
     { name = "appnope", marker = "sys_platform == 'darwin'" },
-=======
-    { name = "appnope", marker = "platform_system == 'Darwin'" },
->>>>>>> 1b963e52d261b1851b7c8927b6607b7fc9ab2f54
     { name = "comm" },
     { name = "debugpy" },
     { name = "ipython" },
@@ -1599,7 +1585,6 @@ wheels = [
 ]
 
 [[package]]
-<<<<<<< HEAD
 name = "pypdf2"
 version = "3.0.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1609,8 +1594,6 @@ wheels = [
 ]
 
 [[package]]
-=======
->>>>>>> 1b963e52d261b1851b7c8927b6607b7fc9ab2f54
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -2077,11 +2060,7 @@ name = "tqdm"
 version = "4.67.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-<<<<<<< HEAD
     { name = "colorama", marker = "sys_platform == 'win32'" },
-=======
-    { name = "colorama", marker = "platform_system == 'Windows'" },
->>>>>>> 1b963e52d261b1851b7c8927b6607b7fc9ab2f54
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737 }
 wheels = [
